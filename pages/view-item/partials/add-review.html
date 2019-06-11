@@ -1,0 +1,43 @@
+<h2>Add a review</h2>
+<form class="review__form">
+  <ul class="list__style__none">
+    <li class="flex flex__wrap review__form__list">
+      <label for="text__input" class="review__form__label">Choose a nickname</label>
+      <span class="form__input__wrapper flex__one">
+        <input type="text" id="text__input" class="review__form__input text__input">
+      </span>
+    </li>
+    <li class="flex flex__wrap review__form__list">
+      <label for="text__area" class="review__form__label">Your review</label>
+      <span class="form__input__wrapper position__rel text__area__wrapper flex__one">
+        <textarea id="text__area" class="review__form__input text__area"></textarea>
+        <span class="tiny__info flex flex__wrap">
+          <span>Your review must be at least 50 characters</span>
+          <span class="red__color">Full review guideline</span>
+        </span>
+      </span>
+    </li>
+    <li class="flex flex__wrap review__form__list">
+      <label class="review__form__label">Overall rating</label>
+      <span class="form__input__wrapper position__rel flex__one">
+        <div class="ui star huge rating outline__none" role="radiogroup" tabindex="-1">
+          <i tabindex="0" aria-checked="true" aria-posinset="1" aria-setsize="5" class="active icon" role="radio"></i>
+          <i tabindex="0" aria-checked="false" aria-posinset="2" aria-setsize="5" class="icon" role="radio"></i>
+          <i tabindex="0" aria-checked="false" aria-posinset="3" aria-setsize="5" class="icon" role="radio"></i>
+          <i tabindex="0" aria-checked="false" aria-posinset="4" aria-setsize="5" class="icon" role="radio"></i>
+          <i tabindex="0" aria-checked="false" aria-posinset="5" aria-setsize="5" class="icon" role="radio"></i>
+        </div>
+      </span>
+    </li>
+    <li class="flex flex__wrap review__form__list">
+      <label class="review__form__label"></label>
+      <span class="form__input__wrapper position__rel">
+        <button type="submit" class="item__button block review__submit__button">Submit</button>
+      </span>
+    </li>
+    <li>
+      <br>
+      <br>
+    </li>
+  </ul>
+</form>

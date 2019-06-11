@@ -1,0 +1,32 @@
+<aside class="sidebar box__shadow__normal sm__sidebar">
+  <div class="filter__summary gray__bg gray__border__bottom sidebar__padding">
+    <span class="filter__title">Filter <span>10</span> items</span>
+    <ul class="filter__params list__style__none">
+      <li>
+        <i aria-hidden="true" class="cancel icon cancel__icon"></i>
+        <span class="gray__color">Gender: </span>
+        <span>Women</span>
+      </li>
+      <li>
+        <i aria-hidden="true" class="cancel icon cancel__icon"></i>
+        <span class="gray__color">Category: </span>
+        <span>Address</span>
+      </li>
+    </ul>
+  </div>
+  <div class="filter__panel white__bg gray__border__bottom sidebar__padding">
+    {{ColorSection}}
+    {{SizeSection}}
+    {{PriceRange}}
+    {{BrandSection}}
+  </div>
+  <div class="sidebar__footer flex space__between sidebar__padding gray__bg">
+    <span class="block">
+      <button type="button" class="item__button block  ">Apply</button>
+    </span>
+    <button class="sidebar__footer__cancel">
+      <i aria-hidden="true" class="cancel icon cancel__icon"></i>
+      <span>Clear All</span>
+    </button>
+  </div>
+</aside>

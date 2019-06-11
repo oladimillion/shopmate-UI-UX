@@ -1,0 +1,37 @@
+.noUi-target {
+  background: #ddd;
+  border-radius: 4px;
+  border: none;
+  box-shadow: none;
+}
+
+.noUi-horizontal {
+  height: 7px;
+  width: 94%;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 17px;
+  height: 17px;
+  left: -13px;
+  top: -5px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid #fff;
+  background: var(--shopmate-color);
+  box-shadow: none;
+}
+
+.noUi-handle:after, 
+.noUi-handle:before {
+  display: none;
+}
+
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+  right: -13px;
+  left: auto;
+}
+
+.noUi-connect {
+  background: var(--shopmate-color);
+}
