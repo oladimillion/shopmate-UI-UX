@@ -1,0 +1,51 @@
+@media only screen and (min-width: 1000px) {
+  span.hotzone {
+    height: 550px;
+    font-size: 1.2rem;
+  }
+
+  span.hotzone div.hotzone__card {
+    width: 30%;
+    height: 90%;
+    min-height: 300px;
+    min-width: 300px;
+  }
+
+  div.hotzone__card .card__button {
+    width: 40%;
+    height: 42px;
+    margin-top: 25px;
+    font-size: 1.3rem;
+    line-height: 0.9;
+  }
+
+  div.hotzone__card .card__photo {
+    height: 52%;
+    width: 64%;
+    margin-top: 24px;
+  }
+
+}
+
+div.hotzone__card div.hover__content__target {
+  height: 73%;
+}
+
+.hot__button {
+  border-radius: 0;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  height: 42px;
+  padding: 0;
+  line-height: 1;
+}
+
+.hot__button__sm__vs {
+  font-size: 1.3rem;
+  height: 32px;
+  top: 5px;
+  min-width: 61px;
+}
+
+

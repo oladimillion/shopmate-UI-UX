@@ -1,0 +1,24 @@
+{
+  "name": "shopmate-ui-ux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oladimillion/shopmate-UI-UX.git"
+  },
+  "author": "Oladimeji Akande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oladimillion/shopmate-UI-UX/issues"
+  },
+  "homepage": "https://github.com/oladimillion/shopmate-UI-UX#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
