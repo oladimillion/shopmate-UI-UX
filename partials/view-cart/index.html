@@ -1,0 +1,31 @@
+<div 
+  id="viewcart__modal"
+  class="shopmate__modal position__fixed flex fadein__fadeout view__cart hidden">
+  <div class="shopmate__modal__inner inner__container margin__auto view__cart__inner">
+    <header class="position__rel view__cart__hori__padding">
+      <span class="cart__title">9 Item(s) In The Cart</span>
+      <span class="position__abs close__icon close__view__cart">×</span>
+    </header>
+    <table class="block view__cart__hori__padding">
+      <thead class="block">
+        <tr class="table__column__label flex space__between">
+          <th class="item flex__two">Item</th>
+          <th class="size flex__one">Size</th>
+          <th class="quantity flex__one">Quantity</th>
+          <th class="price flex__one">Price</th>
+        </tr>
+      </thead>
+      <tbody class="block">
+        {{CartItems}}
+      </tbody>
+    </table>
+    <footer class="view__cart__footer view__cart__hori__padding flex space__between">
+      <button 
+        type="button" 
+        class="item__button block cart__footer__button footer__button__shop close__view__cart">
+        Back to Shop
+      </button>
+      <a class="item__button block cart__footer__button" href="/checkout">Checkout</a>
+    </footer>
+  </div>
+</div>

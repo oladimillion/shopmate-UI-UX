@@ -11,4 +11,12 @@
     .replace("{{NavBarLight}}", navBarLight)
     .replace("{{NavBarDark}}", navBarDark);
   controller.render(template, "main__header");
+
+  qsa(".show__view__cart").forEach((ele) => {
+    ele.addEventListener("click", () => {
+      const cart = qs("#viewcart__modal");
+      cart.classList.remove("hidden");
+      cart.classList.add("visible");
+    });
+  });
 })();
