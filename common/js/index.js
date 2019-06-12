@@ -1,6 +1,6 @@
 (async function () {
   const controller = app.Controller;
-  const cssPath = "assets/css";
+  const cssPath = "common/css";
   controller.addStyle(cssPath);
   controller.addStyle(cssPath, "radio-button");
   controller.addStyle(cssPath, "square-button");
@@ -16,9 +16,11 @@
   controller.addStyle(cssPath, "price-currency");
   controller.addStyle(cssPath, "select-quantity");
   controller.addStyle(cssPath, "round-button");
+  controller.addStyle(cssPath, "modal");
 
   controller.view("partials/header");
   controller.view("partials/footer");
+  controller.view("partials/view-cart");
 
   switch(window.location.pathname) {
     case "/":
