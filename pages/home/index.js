@@ -29,6 +29,11 @@
     .replace("{{Hotzone}}", hotzone);
   controller.render(template);
 
+  function main() {
+    initializeSlider();
+    app.AddToCart();
+  }
+
   function initializeSlider() {
     const slider = document.getElementById('slider');
     const rangeValue = [20, 80];
@@ -51,5 +56,5 @@
     });
   }
 
-  initializeSlider();
+  main();
 })();

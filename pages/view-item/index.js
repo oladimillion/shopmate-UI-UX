@@ -27,4 +27,10 @@
     .replace("{{Review}}", review)
     .replace("{{Preference}}", preference);
   controller.render(template);
+
+  function main() {
+    app.AddToCart();
+  }
+
+  main();
 })();
