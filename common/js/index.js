@@ -31,7 +31,7 @@
       controller.view("pages/view-item");
       break;
     default:
-      controller.view("pages/home");
+      location.pathname = "/";
       break;
   }
 })();
