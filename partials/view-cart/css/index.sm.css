@@ -13,6 +13,10 @@
     font-size: 1.3rem;
   }
 
+  div.view__cart__inner table tr th.quantity,
+  div.view__cart__inner table tr td.quantity,
+  div.view__cart__inner table tr th.size,
+  div.view__cart__inner table tr td.size,
   div.view__cart__inner table tr th.price,
   div.view__cart__inner table tr td.price {
     display: none;

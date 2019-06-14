@@ -58,6 +58,7 @@ span.cart__icon {
   position: relative;
   margin-right: 15px;
   cursor: pointer;
+  transform: translateX(0);
 }
 
 li i.pound.sign {

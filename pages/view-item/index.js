@@ -27,4 +27,33 @@
     .replace("{{Review}}", review)
     .replace("{{Preference}}", preference);
   controller.render(template);
+
+  function main() {
+    app.AddToCart();
+  }
+
+  qs("#view__item__add__to__cart")
+    .addEventListener("click", () => {
+      const parent = qs("#item__photo__wrapper");
+      const img = qs("img", parent);
+      app.Animate(img, parent);
+    });
+
+  qsa("ul#item__photo__thumbnails li")
+    .forEach((elem) => {
+      elem.addEventListener("click", () => {
+        const img = qs("img", elem);
+        const span = qs("#item__photo__wrapper span");
+        const spanImg = qs("img", span);
+        spanImg.classList.add("inactive");
+        setTimeout(() => {
+          const cloneImg = img.cloneNode(true);
+          cloneImg.classList.add("current")
+          span.append(cloneImg);
+          spanImg.remove();
+        }, 120);
+      });
+    });
+
+  main();
 })();

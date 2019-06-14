@@ -29,6 +29,11 @@
     .replace("{{Hotzone}}", hotzone);
   controller.render(template);
 
+  function main() {
+    initializeSlider();
+    app.AddToCart();
+  }
+
   function initializeSlider() {
     const slider = document.getElementById('slider');
     const rangeValue = [20, 80];
@@ -43,7 +48,7 @@
       connect: true,
       range: {
         'min': 1,
-        'max': 100
+        'max': 100,
       }
     });
     slider.noUiSlider.on('slide', function(range) {
@@ -51,5 +56,11 @@
     });
   }
 
-  initializeSlider();
+  qs("#add__to__cart__btn__back__face")
+    .addEventListener("click", () => {
+      const parent = qs("#back__face__card");
+      const img = qs("img", parent);
+      app.Animate(img, parent);
+    });
+  main();
 })();
