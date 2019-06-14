@@ -40,7 +40,7 @@
       {
         left: (flyTo.offsetLeft - (flyerWidth/4)) + "px",
         top: (flyTo.offsetTop - (flyerHeight/4)) + "px",
-        opacity: 0.3,
+        opacity: 0.5,
       }
     ], {
       duration: 1000,
