@@ -1,4 +1,4 @@
-# shopmate-UI-UX
+# Shopmate(UI/UX)
 Open [https://shopmate-uiux.herokuapp.com/](https://shopmate-uiux.herokuapp.com/) to view the hosted App.
 
 ## Available Scripts
