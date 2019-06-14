@@ -1,16 +1,15 @@
 (function () {
-  function getPosition(elem) {
+  const getPosition = ((elem) => {
     const box = elem.getBoundingClientRect();
     const { clientLeft, clientTop } = document.body;
     const [top, left] = [
       (box.top +  window.pageYOffset - clientTop),
       (box.left + window.pageXOffset - clientLeft),
     ];
-    return { top: Math.round(top), left: Math.round(left) };
-  }
+    return { top: top | 0, left: left | 0 };
+  });
   function Animate(flyer, flyerParent) {
-    const cartIcons = qsa("span.cart__icon");
-    const flyTo = cartIcons[0];
+    const flyTo = qs("span.cart__icon");
     const flyerWidth = 100;
     const flyerHeight = 100;
     const flyerClone = flyer.cloneNode(true);
@@ -22,7 +21,7 @@
       };
     });
     const from = coord(flyerParent);
-    document.body.appendChild(flyerClone);
+    document.body.append(flyerClone);
     Object.assign(flyerClone.style, {
       position: "absolute",
       top: from.top + "px",
@@ -33,17 +32,20 @@
       opacity: 0.9,
     });
     flyerClone.animate([ 
-      { // from
+      { 
         left: from.left + "px",
         top: from.top + "px",
+        opacity: 0.9,
       }, 
-      { // to
-        left: (flyTo.offsetLeft - (flyerWidth/2)) + "px",
-        top: flyTo.offsetTop + "px",
+      { 
+        left: (flyTo.offsetLeft - (flyerWidth/4)) + "px",
+        top: (flyTo.offsetTop - (flyerHeight/4)) + "px",
+        opacity: 0.3,
       }
     ], {
       duration: 1000,
       fill: "forwards",
+      easing: "ease-in-out",
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout((() => {
@@ -55,7 +57,7 @@
         { transform: "translateX(4px)" },
         { transform: "translateX(-8px)" },
         { transform: "translateX(8px)" },
-      ], 500);
+      ], 300);
       elemItemCount.forEach((span) => {
         span.innerText = (count <= 9) ? count : "9+";
       });

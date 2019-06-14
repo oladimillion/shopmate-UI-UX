@@ -12,8 +12,38 @@ div.photo__top span.photo__lg {
   padding: 2px;
 }
 
+@keyframes current {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes inactive {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}
+
+span.photo__lg img {
+  transform: translateX(500px);
+}
+
+span.photo__lg img.current {
+  animation: current 0.2s forwards ease-in-out;
+}
+
+span.photo__lg img.inactive {
+  animation: inactive 0.2s forwards ease-in-out;
+}
+
 div.viewitem__photo ul.photo__thumbnails {
-  width: 300px
+  width: 300px;
 }
 
 ul.photo__thumbnails li:first-child {
