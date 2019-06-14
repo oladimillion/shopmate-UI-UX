@@ -32,12 +32,12 @@
       opacity: 0.9,
     });
     flyerClone.animate([ 
-      { 
+      {
         left: from.left + "px",
         top: from.top + "px",
         opacity: 0.9,
-      }, 
-      { 
+      },
+      {
         left: (flyTo.offsetLeft - (flyerWidth/4)) + "px",
         top: (flyTo.offsetTop - (flyerHeight/4)) + "px",
         opacity: 0.3,

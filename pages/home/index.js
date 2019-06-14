@@ -10,6 +10,9 @@
   controller.addStyle(cssPath, "catalogue.md");
   controller.addStyle(cssPath, "catalogue.sm");
   controller.addStyle(cssPath, "ui-slider");
+  controller.addStyle(cssPath, "newsletter");
+  controller.addStyle(cssPath, "newsletter.md");
+  controller.addStyle(cssPath, "featured");
   const navSection = await app.Template(partialsPath, "nav-section");
   const colorSection = await app.Template(partialsPath, "color-section");
   const sizeSection = await app.Template(partialsPath, "size-section");
@@ -17,6 +20,8 @@
   const cardList = await app.Template(partialsPath, "card-list");
   const priceRange = await app.Template(partialsPath, "price-range");
   const hotzone = await app.Template(partialsPath, "hotzone");
+  const newsletter = await app.Template(partialsPath, "newsletter");
+  const featured = await app.Template(partialsPath, "featured");
   const sidebar = (await app.Template(partialsPath, "sidebar"))
     .replace("{{ColorSection}}", colorSection)
     .replace("{{SizeSection}}", sizeSection)
@@ -26,20 +31,22 @@
     .replace("{{NavSection}}", navSection)
     .replace("{{Sidebar}}", sidebar)
     .replace("{{CardList}}", cardList)
-    .replace("{{Hotzone}}", hotzone);
+    .replace("{{Hotzone}}", hotzone)
+    .replace("{{Featured}}", featured)
+    .replace("{{Newsletter}}", newsletter);
   controller.render(template);
 
   function main() {
-    initializeSlider();
+    InitializeSlider();
     app.AddToCart();
   }
 
-  function initializeSlider() {
+  function InitializeSlider() {
     const slider = document.getElementById('slider');
     const rangeValue = [20, 80];
     const setRangeValue = (([min, max]) => {
-      qs("#min-price").innerText = parseInt(min);
-      qs("#max-price").innerText = parseInt(max);
+      qs("#min-price").innerText = min | 0;
+      qs("#max-price").innerText = max | 0;
     });
     setRangeValue(rangeValue);
     noUiSlider.create(slider, {
@@ -51,7 +58,7 @@
         'max': 100,
       }
     });
-    slider.noUiSlider.on('slide', function(range) {
+    slider.noUiSlider.on('slide', (range) => {
       setRangeValue(range);
     });
   }
