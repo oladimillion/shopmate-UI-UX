@@ -15,9 +15,11 @@ Runs the app in the development mode.<br>
 Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 ## Screenshots
-
+#### View Cart page
 ![2019-06-14 15 08 05](https://user-images.githubusercontent.com/23438586/59537108-96359c80-8eed-11e9-873f-c83a133c71fe.gif)
+#### View Item page
 ![2019-06-14 15 08 29](https://user-images.githubusercontent.com/23438586/59542892-1d8c0b80-8f00-11e9-9993-630c16c858f9.gif)
+#### Catalogue page
 ![2019-06-14 15 49 53](https://user-images.githubusercontent.com/23438586/59537170-bc5b3c80-8eed-11e9-8fb5-da6e9ef38cd6.gif)
 
 ## The project folder/directory structure
