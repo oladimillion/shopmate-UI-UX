@@ -1,4 +1,4 @@
-(function () {
+(function() {
   const qs = ((selector, scope=document) => {
     return scope.querySelector(selector);
   });
@@ -24,12 +24,17 @@
       .forEach(({button, parent}) => {
         const img = (qs("img", parent));
         button
-          .addEventListener("click", ()=>app.Animate(img, parent));
+          .addEventListener("click", ()=>app.Animate(img.parentNode, parent));
       });
   };
+  const matchWindowSize = ((size="600") => {
+    const media = window.matchMedia(`(max-width: ${size}px)`);
+    return media.matches;
+  })
   window.app = window.app || {};
   window.app.AddToCart = AddToCart;
   window.app.getParentNode = getParentNode;
+  window.app.matchWindowSize = matchWindowSize;
   window.qs = qs;
   window.qsa = qsa;
 })();

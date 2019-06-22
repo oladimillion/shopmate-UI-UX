@@ -36,22 +36,24 @@
     .addEventListener("click", () => {
       const parent = qs("#item__photo__wrapper");
       const img = qs("img", parent);
-      app.Animate(img, parent);
+      app.Animate(img.parentNode, parent);
     });
 
   qsa("ul#item__photo__thumbnails li")
     .forEach((elem) => {
-      elem.addEventListener("click", () => {
+      elem.addEventListener("click", (e) => {
         const img = qs("img", elem);
-        const span = qs("#item__photo__wrapper span");
+        const span = qs("#item__photo__wrapper span span");
         const spanImg = qs("img", span);
-        spanImg.classList.add("inactive");
-        setTimeout(() => {
-          const cloneImg = img.cloneNode(true);
-          cloneImg.classList.add("current")
-          span.append(cloneImg);
-          spanImg.remove();
-        }, 120);
+        if(spanImg.alt !== e.target.alt) {
+          spanImg.classList.add("inactive");
+          setTimeout(() => {
+            const cloneImg = img.cloneNode(true);
+            cloneImg.classList.add("current")
+            span.append(cloneImg);
+            spanImg.remove();
+          }, 120);
+        }
       });
     });
 
