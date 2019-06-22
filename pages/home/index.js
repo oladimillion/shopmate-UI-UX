@@ -67,7 +67,7 @@
     .addEventListener("click", () => {
       const parent = qs("#back__face__card");
       const img = qs("img", parent);
-      app.Animate(img, parent);
+      app.Animate(img.parentNode, parent);
     });
   main();
 })();
