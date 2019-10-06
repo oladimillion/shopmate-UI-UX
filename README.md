@@ -1,6 +1,5 @@
 # Shopmate(UI/UX)
-Open [https://shopmate-uiux.herokuapp.com/](https://shopmate-uiux.herokuapp.com/) to view the hosted App.
-
+Vist the hosted solution @ [https://shopmate-uiux.herokuapp.com/](https://shopmate-uiux.herokuapp.com/) 
 ## Available Pages
 goto `/home` or `/` to view the **catalogue page**<br>
 goto `/view-item` to view the **item page**<br>
