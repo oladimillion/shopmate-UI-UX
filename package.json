@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/oladimillion/shopmate-UI-UX/issues"
   },
-  "homepage": "https://oladimillion.github.io/shopmate-UI-UX",
+  "homepage": "https://github.com/oladimillion/shopmate-UI-UX#readme",
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.9.1"
