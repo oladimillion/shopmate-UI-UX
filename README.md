@@ -1,3 +1,5 @@
+## Credit
+[Turing](https://turing.com)
 # Shopmate(UI/UX)
 Vist the hosted solution @ [https://shopmate-uiux.herokuapp.com/](https://shopmate-uiux.herokuapp.com/) 
 ## Available Pages
